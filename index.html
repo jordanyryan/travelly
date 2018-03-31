@@ -13,7 +13,7 @@
 
 <body>
   <div class="navbar-fixed">
-    <nav class="teal">
+    <nav class="blue accent-2">
       <div class="container">
         <div class="nav-wrapper">
           <a href="#home" class="brand-logo">Travelly</a>
@@ -38,14 +38,59 @@
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+    <div class="slider">
+      <ul class="slides">
+        <li>
+          <img class="responsive-img" src="img/img4.jpg">
+          <!-- CENTER ALIGN CAPTION -->
+          <div class="caption center-align">
+            <h3 class="white-text">Take Your Dream Vacation</h3>
+            <h5 class="white-text">We'll help you plan it</h5>
+            <button class="btn">Learn More</button>
+          </div>
+        </li>
+        <li>
+          <img class="responsive-img" src="img/img5.jpg">
+          <!-- LEFT ALIGN CAPTION -->
+          <div class="caption left-align">
+            <h3>We Work With All Budgets</h3>
+            <h5 class="light grey-text text-lighten-3">We'll create a custom trip based on your budget</h5>
+            <button class="btn">Learn More</button>
+          </div>
+        </li>
+        <li>
+          <img class="responsive-img" src="img/img3.jpg">
+          <!-- RIGHT ALIGN CAPTION -->
+          <div class="caption right-align">
+            <h3>Go Anywhere in the World</h3>
+            <h5 class="light grey-text text-lighten-3">We have expert knowledge of every destination</h5>
+            <button class="btn">Learn More</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="row teal">
+      <div class="input-field white col s6 offset-s3">
+        <input type="text" id="destinations" class="autocomplete" placeholder="Aruba, Cancun, etc...">
+      </div>
+    </div>
 
   
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script>
     $(document).ready(function () {
-     $('.button-collapse').sideNav();
-      
+      $('.button-collapse').sideNav({
+        menuWidth: 200
+      });
+      $('.slider').slider({
+        indicators: false,
+        height: 400,
+        transition: 500,
+        interval: 6000
+      });
+      $('.materialboxed').materialbox();
     });
   </script>
 </body>
